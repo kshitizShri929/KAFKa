@@ -26,12 +26,12 @@ To get started with **Apache Kafka** CLI commands, you'll need to have Kafka ins
 To create a topic in Kafka, use the `kafka-topics.sh` command. Here’s the syntax:
 
 ```bash
-kafka-topics.sh --create --topic <topic-name> --bootstrap-server <broker-list> --partitions <num-partitions> --replication-factor <num-replicas>
+bin/kafka-topics.sh --create --topic <topic-name> --bootstrap-server <broker-list> --partitions <num-partitions> --replication-factor <num-replicas>
 ```
 
 Example:
 ```bash
-kafka-topics.sh --create --topic test-topic --bootstrap-server localhost:9092 --partitions 3 --replication-factor 1
+bin/kafka-topics.sh --create --topic test-topic --bootstrap-server localhost:9092 --partitions 3 --replication-factor 1
 ```
 
 - `--topic`: The name of the topic.
@@ -43,24 +43,24 @@ kafka-topics.sh --create --topic test-topic --bootstrap-server localhost:9092 --
 To list all available topics, use the `--list` flag with `kafka-topics.sh`:
 
 ```bash
-kafka-topics.sh --list --bootstrap-server <broker-list>
+bin/kafka-topics.sh --list --bootstrap-server <broker-list>
 ```
 
 Example:
 ```bash
-kafka-topics.sh --list --bootstrap-server localhost:9092
+bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 ```
 
 #### **Delete a Topic:**
 To delete a topic, use the `--delete` flag:
 
 ```bash
-kafka-topics.sh --delete --topic <topic-name> --bootstrap-server <broker-list>
+bin/kafka-topics.sh --delete --topic <topic-name> --bootstrap-server <broker-list>
 ```
 
 Example:
 ```bash
-kafka-topics.sh --delete --topic test-topic --bootstrap-server localhost:9092
+bin/kafka-topics.sh --delete --topic test-topic --bootstrap-server localhost:9092
 ```
 
 ### 2. **Send Data using Producer**
@@ -69,12 +69,12 @@ A Kafka producer sends messages to a topic. Use the `kafka-console-producer.sh` 
 
 #### **Basic Command:**
 ```bash
-kafka-console-producer.sh --broker-list <broker-list> --topic <topic-name>
+bin/kafka-console-producer.sh --broker-list <broker-list> --topic <topic-name>
 ```
 
 Example:
 ```bash
-kafka-console-producer.sh --broker-list localhost:9092 --topic test-topic
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test-topic
 ```
 
 Once this command is executed, you can start typing messages into the terminal. Each line you type will be sent as a message to the `test-topic` topic.
@@ -93,12 +93,12 @@ A Kafka consumer reads messages from a Kafka topic. Use the `kafka-console-consu
 
 #### **Basic Command:**
 ```bash
-kafka-console-consumer.sh --bootstrap-server <broker-list> --topic <topic-name> --from-beginning
+bin/kafka-console-consumer.sh --bootstrap-server <broker-list> --topic <topic-name> --from-beginning
 ```
 
 Example:
 ```bash
-kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test-topic --from-beginning
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test-topic --from-beginning
 ```
 
 - `--from-beginning`: Ensures that the consumer reads all messages from the beginning, not just new ones.
