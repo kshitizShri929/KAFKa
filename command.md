@@ -111,3 +111,4 @@ Hello, Kafka!
 Another message
 ```
 
+ Resource https://www.geeksforgeeks.org/kafka-architecture/
