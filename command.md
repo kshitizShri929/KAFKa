@@ -111,33 +111,3 @@ Hello, Kafka!
 Another message
 ```
 
-### Summary of Commands:
-
-- **Create Topic:**
-  ```bash
-  kafka-topics.sh --create --topic <topic-name> --bootstrap-server <broker-list> --partitions <num-partitions> --replication-factor <num-replicas>
-  ```
-  
-- **List Topics:**
-  ```bash
-  kafka-topics.sh --list --bootstrap-server <broker-list>
-  ```
-  
-- **Delete Topic:**
-  ```bash
-  kafka-topics.sh --delete --topic <topic-name> --bootstrap-server <broker-list>
-  ```
-  
-- **Producer (Send Data):**
-  ```bash
-  kafka-console-producer.sh --broker-list <broker-list> --topic <topic-name>
-  ```
-  
-- **Consumer (Receive Data):**
-  ```bash
-  kafka-console-consumer.sh --bootstrap-server <broker-list> --topic <topic-name> --from-beginning
-  ```
-
----
-
-This should get you started with Kafka CLI commands. If you need help setting up Kafka or want to go deeper into any of these commands, feel free to ask!
